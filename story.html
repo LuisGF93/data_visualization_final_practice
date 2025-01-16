@@ -23,6 +23,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             background: white;
             border-radius: 8px;
+            overflow: hidden;
         }
 
         h1 {
@@ -31,19 +32,30 @@
             color: #333;
         }
 
+        .flourish-container {
+            width: 100%;
+            height: 500px;
+            overflow-y: scroll;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
         .flourish-embed {
             width: 100%;
+            height: 1000px; /* Establece una altura suficiente para el contenido */
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Interactive Visualization</h1>
-        <div class="flourish-embed" data-src="story/2818978">
-            <script src="https://public.flourish.studio/resources/embed.js"></script>
-            <noscript>
-                <img src="https://public.flourish.studio/story/2818978/thumbnail" width="100%" alt="visualization" />
-            </noscript>
+        <div class="flourish-container">
+            <div class="flourish-embed" data-src="story/2818978">
+                <script src="https://public.flourish.studio/resources/embed.js"></script>
+                <noscript>
+                    <img src="https://public.flourish.studio/story/2818978/thumbnail" width="100%" alt="visualization" />
+                </noscript>
+            </div>
         </div>
     </div>
 </body>
